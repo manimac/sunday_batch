@@ -1,0 +1,27 @@
+<div ng-controller="homeController">
+    Home page 
+    <div ng-bind="name">
+        <!-- {{name}} -->
+    </div>
+    <input type="text" ng-model="limit">
+    <input type="text" ng-model="search">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="stu in students|limitTo:limit|filter:{age:search}">
+                <td>{{stu.name}}</td>
+                <td>{{stu.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div ng-if="showDiv"> 
+        lfjmkskofgnkfnjkngndfg
+    </div>
+    <div ng-show="showDiv"> 
+        lfjmkskofgnkfnjkngndfg
+    </div>
+    <button ng-click="changediv()">Click me</button>
+</div>
