@@ -1,4 +1,5 @@
 var app = angular.module('erp',['ui.router']);
+
 app.config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise('/error');
     $stateProvider
@@ -10,6 +11,11 @@ app.config(function($stateProvider,$urlRouterProvider){
     .state('about',{
         url : '/about',
         templateUrl : 'views/about.html'
+    })
+
+    .state('services',{
+        url : '/services',
+        templateUrl : 'views/services.html'
     })
     .state('error',{
         url : '/error',

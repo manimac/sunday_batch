@@ -1,0 +1,35 @@
+<style>
+    .active{
+        background: red;
+    }
+</style>
+
+<div ng-controller="task1Controller">
+    {{name|toUpperCase}}
+    <input type="text" ng-model="name">
+    <button ng-click="save()">Click me</button>
+    <div>{{price1|convertDollar}}</div>
+    <div>{{price2|convertDollar}}</div>
+    <div>{{price3|convertDollar}}</div>
+</div>
+
+<div ng-controller="task2Controller">
+    {{name|toUpperCase}}
+
+
+
+    <div ng-if="showDiv">
+        Test 1
+    </div>
+
+    <div ng-show="showDiv">
+        Test 2
+    </div>
+    <div ng-class="{'active':showClass}">
+        mdnfmsnag
+    </div>
+
+    <div ng-style="styleProp">
+        dsfsd
+    </div>
+</div>
