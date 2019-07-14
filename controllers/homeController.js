@@ -28,3 +28,35 @@ app.controller('homeController',function($scope){
 app.controller('aboutController',function(){
     
 })
+
+app.controller('directiveController',function($scope,$state){
+
+    if($state.current.name == 'home')
+    {
+        $scope.homeTable = [
+            {
+                name : 'Home',
+                age : 20
+            },
+            {
+                name : 'Dinesh',
+                age : 25
+            }
+        ]
+    }
+    else {
+        $scope.homeTable = [
+            {
+                name : 'About',
+                age : 20
+            },
+            {
+                name : 'Dinesh',
+                age : 25
+            }
+        ]
+    }
+    
+
+    
+})
